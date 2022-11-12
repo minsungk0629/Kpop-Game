@@ -1,0 +1,19 @@
+body {
+  background-color: rgb(251, 244, 214);
+}
+.image-container {
+  position: relative;
+  min-height: 500px;
+  display: flex;
+}
+.image {
+}
+button {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  justify-content: center;
+  right: 50%;
+  transform: translate(-50%, -50%);
+}

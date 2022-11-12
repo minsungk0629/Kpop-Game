@@ -1,0 +1,102 @@
+#UpViewCount {
+  top: 33vh;
+  font-size: 3vh;
+}
+#DownViewCount {
+  top: 33vh;
+  font-size: 3vh;
+}
+#Score {
+  font-size: 3vh;
+  background-color: black;
+  top: 42vh;
+  left: 9vw;
+  width: 15vw;
+}
+.image {
+  filter: brightness(60%);
+}
+
+.Container {
+  background-color: black;
+}
+#firstMV {
+  height: 50%;
+}
+#secondMV {
+  top: 50%;
+  height: 50%;
+}
+.VS {
+  position: absolute;
+  color: white;
+  z-index: 2;
+  top: 49%;
+  font-size: 1.5em;
+  text-align: center;
+  width: 100%;
+}
+.background {
+  position: fixed;
+  width: 100%;
+  .overlay {
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    .text {
+      position: absolute;
+      text-align: center;
+      z-index: 1;
+      top: 18vh;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 90vw;
+      color: #fff;
+      font-size: 3.5vh;
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .container {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  .Container {
+    background-color: red;
+    height: 100%;
+    width: 100%;
+  }
+  .background {
+    margin: 0;
+
+    background-color: black;
+    width: 100%;
+  }
+  .image {
+    width: 100%;
+  }
+  .overlay {
+    width: 100%;
+
+    position: relative;
+    display: flex;
+  }
+  .text {
+    display: none;
+  }
+  .link {
+    background-color: red;
+    width: 50%;
+    height: 100%;
+  }
+  #fst {
+    background-color: blue;
+    float: left;
+  }
+  #snd {
+    float: left;
+  }
+}
