@@ -10,6 +10,13 @@
   font-size: 3vh;
   background-color: black;
   top: 42vh;
+  left: 90vw;
+  width: 15vw;
+}
+#Stage {
+  font-size: 3vh;
+  background-color: black;
+  top: 42vh;
   left: 9vw;
   width: 15vw;
 }
@@ -59,6 +66,46 @@
 }
 
 @media screen and (min-width: 1000px) {
+  #firstMV {
+    float: left;
+    width: 50%;
+    height: 100%;
+  }
+  #secondMV {
+    top: 0%;
+    width: 50%;
+    left: 50%;
+    height: 100%;
+  }
+  #UpViewCount {
+    top: 55vh;
+    font-size: 2em;
+  }
+  #DownViewCount {
+    top: 55vh;
+    font-size: 2em;
+  }
+  #Score {
+    font-size: 2em;
+    background-color: black;
+    top: 80vh;
+    left: 86%;
+    width: 10vw;
+  }
+  #Stage {
+    font-size: 2em;
+    background-color: black;
+    top: 80vh;
+    left: -88%;
+    width: 10vw;
+  }
+  #Title {
+    top: 40vh;
+    font-size: 2.3em;
+  }
+  .VS {
+    font-size: 3em;
+  }
   .container {
     padding: 0;
     margin: 0;
@@ -80,23 +127,12 @@
   }
   .overlay {
     width: 100%;
-
     position: relative;
-    display: flex;
   }
-  .text {
-    display: none;
-  }
+
   .link {
     background-color: red;
     width: 50%;
     height: 100%;
-  }
-  #fst {
-    background-color: blue;
-    float: left;
-  }
-  #snd {
-    float: left;
   }
 }

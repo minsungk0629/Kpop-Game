@@ -6,15 +6,18 @@ const Game = (props) => {
   const [score, setScore] = useState(0);
   const [firstID, setFirstID] = useState(props.videoID[0]);
   const [secondID, setSecondID] = useState(props.videoID[1]);
+  const [stage, setStage] = useState(1);
   return (
     <GameContent
       IDList={props.videoID}
       firstID={firstID}
       secondID={secondID}
       score={score}
+      stage={stage}
       setScore={setScore}
       setFirstID={setFirstID}
       setSecondID={setSecondID}
+      setStage={setStage}
     />
   );
 };
@@ -24,8 +27,6 @@ export async function getStaticProps() {
     posts.items.map((x) => {
       return videoID.push("&id=" + x.snippet.resourceId?.videoId);
     });
-    console.log(videoID);
-    console.log(videoID.length);
   }
   const apiKey = process.env.NEXT_PUBLIC_API_KEY;
   const playlistID = "PLODMrfwE__J41rFco3nOsCRZm62qETZ_O";
