@@ -9,7 +9,7 @@ const StartPage = () => {
           src="/../public/kpop.jpg"
           alt="Picture of the author"
           fill
-          className="image"
+          className="img"
           priority
         />
         <Link href="/Game">

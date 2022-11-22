@@ -24,9 +24,12 @@ const Game = (props) => {
 export async function getStaticProps() {
   const videoID = [];
   function getVideoId(posts) {
-    posts.items.map((x) => {
-      return videoID.push("&id=" + x.snippet.resourceId?.videoId);
-    });
+    {
+      posts.items &&
+        posts.items.map((x) => {
+          return videoID.push("&id=" + x.snippet.resourceId?.videoId);
+        });
+    }
   }
   const apiKey = process.env.NEXT_PUBLIC_API_KEY;
   const playlistID = "PLODMrfwE__J41rFco3nOsCRZm62qETZ_O";
