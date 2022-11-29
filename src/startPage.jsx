@@ -13,7 +13,11 @@ const StartPage = () => {
           priority
         />
         <Link href="/Game">
-          <button type="button" className="btn btn-warning button">
+          <button
+            type="button"
+            className="btn btn-warning button"
+            id="startBtn"
+          >
             게임하기
           </button>
         </Link>

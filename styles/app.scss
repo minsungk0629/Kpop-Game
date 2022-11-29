@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 19px;
 }
 html,
 body {
@@ -10,3 +11,4 @@ body {
 @import "./startPage.scss";
 @import "./gameContent";
 @import "./Result";
+@import "./kakao";

@@ -1,10 +1,10 @@
 #UpViewCount {
   top: 33vh;
-  font-size: 3vh;
+  font-size: 3vh !important;
 }
 #DownViewCount {
   top: 33vh;
-  font-size: 3vh;
+  font-size: 3vh !important;
 }
 #Score {
   font-size: 3vh;
@@ -39,7 +39,7 @@
   color: white;
   z-index: 2;
   top: 49%;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   text-align: center;
   width: 100%;
 }
@@ -79,11 +79,11 @@
   }
   #UpViewCount {
     top: 55vh;
-    font-size: 2em;
+    font-size: 2rem !important;
   }
   #DownViewCount {
     top: 55vh;
-    font-size: 2em;
+    font-size: 2rem !important;
   }
   #Score {
     font-size: 2em;
@@ -102,6 +102,11 @@
   #Title {
     top: 40vh;
     font-size: 2.3em;
+    text-overflow: ellipsis;
+    width: 100%;
+  }
+  .countUP {
+    font-size: 3.5vh !important;
   }
   .VS {
     font-size: 3em;

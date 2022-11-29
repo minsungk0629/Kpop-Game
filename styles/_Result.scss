@@ -1,9 +1,49 @@
+.resultContainer {
+  text-align: center;
+  justify-content: center;
+}
 .resultScore {
   text-align: center;
   padding: 5vw;
   background-color: white;
-  margin: 10vw;
-  height: 60vh;
-  font-size: 50px;
+  margin: 50px auto;
+  height: 80vh;
+  font-size: 2rem;
   border-radius: 70px 70px 70px 70px;
+}
+#__next {
+  height: 100%;
+}
+button {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  justify-content: center;
+  right: 50%;
+  transform: translate(50%, 30%);
+}
+#resultBtn {
+  z-index: 1;
+  position: absolute;
+  top: 70vh;
+  text-align: center;
+  justify-content: center;
+  right: 50%;
+  transform: translate(50%, 30%);
+}
+#shareBtn {
+  top: 30%;
+}
+#ScoreText {
+  font-size: 8rem;
+  color: rgb(255, 208, 0);
+  -webkit-text-stroke: 2px rgb(236, 242, 57);
+}
+#ResultText {
+  margin-top: 20px;
+  font-size: 2.5rem;
+}
+#Wja {
+  font-size: 3rem;
 }

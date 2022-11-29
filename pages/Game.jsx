@@ -3,8 +3,13 @@ import GameContent from "../src/gameContent";
 import { useEffect, useState } from "react";
 
 const Game = (props) => {
+  function rand(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
+  const firstNum = rand(0, props.videoID.length);
+  const secondNum = rand(0, props.videoId?.length);
   const [score, setScore] = useState(0);
-  const [firstID, setFirstID] = useState(props.videoID[0]);
+  const [firstID, setFirstID] = useState(props.videoID[firstNum]);
   const [secondID, setSecondID] = useState(props.videoID[1]);
   const [stage, setStage] = useState(1);
   return (
@@ -34,7 +39,7 @@ export async function getStaticProps() {
   const apiKey = process.env.NEXT_PUBLIC_API_KEY;
   const playlistID = "PLODMrfwE__J41rFco3nOsCRZm62qETZ_O";
   const res = await fetch(
-    `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistID}&maxResults=30&key=AIzaSyDNikTB4dl2anKMqtQRQCEw9eTjwtAw_j0`
+    `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistID}&maxResults=50&key=AIzaSyDNikTB4dl2anKMqtQRQCEw9eTjwtAw_j0`
   );
   const posts = await res.json();
   getVideoId(posts);

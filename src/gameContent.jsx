@@ -56,7 +56,7 @@ const GameContent = (props) => {
     <>
       <div className="Container">
         <div className="link" id="fst">
-          <Link href={props.stage > 9 ? "/Result" : "/Game"}>
+          <Link href={props.stage >= 10 ? "/Result" : "/Game"}>
             <div className="background" id="firstMV">
               <div className="overlay">
                 <a>
@@ -75,12 +75,12 @@ const GameContent = (props) => {
                           setVisible(true);
                           v = false;
                           console.log(v);
-                        }
-                        if (visible) {
                           if (firstViewC >= secondViewC) {
                             props.setScore(props.score + 1);
                             updateScore();
                           }
+                        }
+                        if (visible) {
                           nextStage();
                           props.setStage(props.stage + 1);
                         }
@@ -93,7 +93,12 @@ const GameContent = (props) => {
                 </div>
                 {visible && (
                   <h3 className="text" id="UpViewCount">
-                    <CountUp end={firstViewC} /> 회
+                    <CountUp
+                      className="countUP"
+                      end={firstViewC}
+                      style={{ fontSize: "3vh" }}
+                    />{" "}
+                    회
                   </h3>
                 )}
               </div>
@@ -102,7 +107,7 @@ const GameContent = (props) => {
         </div>
         <div className="VS">VS</div>
         <div className="link" id="snd">
-          <Link href={props.stage > 9 ? "/Result" : "/Game"}>
+          <Link href={props.stage >= 10 ? "/Result" : "/Game"}>
             <div className="background" id="secondMV">
               <div className="overlay">
                 <a>
@@ -121,12 +126,12 @@ const GameContent = (props) => {
                           setVisible(true);
                           v = false;
                           console.log(v);
-                        }
-                        if (visible) {
                           if (firstViewC <= secondViewC) {
                             props.setScore(props.score + 1);
                             updateScore();
                           }
+                        }
+                        if (visible) {
                           nextStage();
                           props.setStage(props.stage + 1);
                           v = false;
@@ -141,7 +146,12 @@ const GameContent = (props) => {
                 </div>
                 {visible && (
                   <h3 className="text" id="DownViewCount">
-                    <CountUp end={secondViewC} /> 회
+                    <CountUp
+                      className="countUP"
+                      end={secondViewC}
+                      style={{ fontSize: "3vh" }}
+                    />{" "}
+                    회
                   </h3>
                 )}
                 <div className="text" id="Score">
