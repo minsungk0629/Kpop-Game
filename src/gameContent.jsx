@@ -217,7 +217,7 @@ const GameContent = (props) => {
                       if (v && !visible && !secondV) {
                         setVisible(true);
                         v = false;
-                        if (firstViewC >= secondViewC) {
+                        if (firstViewC <= secondViewC) {
                           props.setScore(props.score + 1);
                           updateScore();
                         }
