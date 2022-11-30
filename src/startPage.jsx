@@ -1,12 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
+import kpopIMG from "../public/kpop.jpg";
 
 const StartPage = () => {
   return (
     <>
       <div className="image-container">
         <Image
-          src="/../public/kpop.jpg"
+          src={kpopIMG}
           alt="Picture of the author"
           fill
           className="img"

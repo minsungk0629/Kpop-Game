@@ -29,13 +29,15 @@ const GameContent = (props) => {
   function nextStage() {
     setVisible(false);
     v = false;
-    const firstNum = rand(0, props.IDList.length);
-    let secondNum = rand(0, props.IDList.length);
-    while (firstNum == secondNum) {
-      secondNum = rand(0, props.IDList.length);
+    if (props.stage < 10) {
+      const firstNum = rand(0, props.IDList.length);
+      let secondNum = rand(0, props.IDList.length);
+      while (firstNum == secondNum) {
+        secondNum = rand(0, props.IDList.length);
+      }
+      props.setFirstID(props.IDList[firstNum]);
+      props.setSecondID(props.IDList[secondNum]);
     }
-    props.setFirstID(props.IDList[firstNum]);
-    props.setSecondID(props.IDList[secondNum]);
   }
 
   useEffect(() => {
@@ -61,7 +63,6 @@ const GameContent = (props) => {
             <div className="background" id="firstMV">
               <div className="overlay">
                 <a>
-                  {/* <img src={firstImg} className="image" alt="1" /> */}
                   {firstImg && (
                     <Image
                       src={firstImg}
@@ -175,7 +176,6 @@ const GameContent = (props) => {
             <div className="background" id="secondMV">
               <div className="overlay">
                 <a>
-                  {/* <img src={secondImg} className="image" alt="2" /> */}
                   {secondImg && (
                     <Image
                       src={secondImg}
@@ -283,9 +283,11 @@ const GameContent = (props) => {
                 <div className="text" id="Score">
                   {props.score}점
                 </div>
-                <div className="text" id="Stage">
-                  {props.stage}/10
-                </div>
+                {props.stage <= 10 && (
+                  <div className="text" id="Stage">
+                    {props.stage}/10
+                  </div>
+                )}
               </div>
             </div>
           </Link>
