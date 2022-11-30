@@ -11,6 +11,7 @@ const nextConfig = {
   },
   reactStrictMode: true,
   images: {
+    loader: "custom",
     domains: ["i.ytimg.com"],
   },
   sassOptions: {

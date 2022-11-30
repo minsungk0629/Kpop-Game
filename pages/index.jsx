@@ -1,5 +1,8 @@
 import StartPage from "../src/startPage";
 import { useEffect } from "react";
+import Image from "../src/Image";
+import kpopIMG from "../public/kpop.jpg";
+
 const Home = () => {
   const kakaoKey = "db38d8749dd506387432d526a93edf4a";
   useEffect(() => {
@@ -11,6 +14,7 @@ const Home = () => {
   return (
     <>
       <StartPage />
+      <Image src={kpopIMG} alt="Vercel Logo" width={72} height={16} />
     </>
   );
 };

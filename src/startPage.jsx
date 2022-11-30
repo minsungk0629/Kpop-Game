@@ -6,13 +6,13 @@ const StartPage = () => {
   return (
     <>
       <div className="image-container">
-        <Image
+        {/* <Image
           src={kpopIMG}
           alt="Picture of the author"
           fill
           className="img"
           priority
-        />
+        /> */}
         <Link href="/Game">
           <button
             type="button"
