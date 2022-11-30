@@ -113,9 +113,31 @@ const GameContent = (props) => {
                       {firstViewC} 회
                     </div>
                     {firstViewC < secondViewC ? (
-                      <div className="OX X">X</div>
+                      <div
+                        className="OX X"
+                        onClick={() => {
+                          if (!visible && secondV) {
+                            setSecondV(false);
+                            nextStage();
+                            props.setStage(props.stage + 1);
+                          }
+                        }}
+                      >
+                        X
+                      </div>
                     ) : (
-                      <div className="OX O">O</div>
+                      <div
+                        className="OX O"
+                        onClick={() => {
+                          if (!visible && secondV) {
+                            setSecondV(false);
+                            nextStage();
+                            props.setStage(props.stage + 1);
+                          }
+                        }}
+                      >
+                        O
+                      </div>
                     )}
                   </h3>
                 )}
@@ -182,9 +204,31 @@ const GameContent = (props) => {
                       {secondViewC} 회
                     </div>
                     {firstViewC > secondViewC ? (
-                      <div className="OX X">X</div>
+                      <div
+                        className="OX X"
+                        onClick={() => {
+                          if (!visible && secondV) {
+                            setSecondV(false);
+                            nextStage();
+                            props.setStage(props.stage + 1);
+                          }
+                        }}
+                      >
+                        X
+                      </div>
                     ) : (
-                      <div className="OX O">O</div>
+                      <div
+                        className="OX O"
+                        onClick={() => {
+                          if (!visible && secondV) {
+                            setSecondV(false);
+                            nextStage();
+                            props.setStage(props.stage + 1);
+                          }
+                        }}
+                      >
+                        O
+                      </div>
                     )}
                   </h3>
                 )}
