@@ -4,9 +4,9 @@ import Kakao from "../src/kakao";
 
 const Result = () => {
   const kakaoKey = "db38d8749dd506387432d526a93edf4a";
-  console.log("kakaoKey= ", kakaoKey);
   useEffect(() => {
     if (!window.Kakao.isInitialized()) {
+      console.log("kakaoKey= ", kakaoKey);
       window.Kakao.init(kakaoKey);
     }
   }, []);
