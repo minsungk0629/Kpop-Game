@@ -10,10 +10,10 @@ class Kakao extends Component {
           typeof window !== "undefined" ? sessionStorage.getItem("score") : 0
         }점 획득!`,
         description: "",
-        imageUrl: "https://ifh.cc/g/8K2JlX.jpg",
+        imageUrl: "https://ifh.cc/g/D8wKsS.jpg",
         link: {
-          mobileWebUrl: "https://cheonmro.github.io/",
-          webUrl: "https://cheonmro.github.io/",
+          mobileWebUrl: "https://kpop-game-three.vercel.app/",
+          webUrl: "https://kpop-game-three.vercel.app/",
         },
       },
       social: {
@@ -25,8 +25,8 @@ class Kakao extends Component {
         {
           title: "나도 하러 가기",
           link: {
-            mobileWebUrl: "http://localhost:3000",
-            webUrl: "http://localhost:3000",
+            mobileWebUrl: "https://kpop-game-three.vercel.app/",
+            webUrl: "https://kpop-game-three.vercel.app/",
           },
         },
       ],
