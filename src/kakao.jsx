@@ -2,7 +2,6 @@ import React, { Component } from "react";
 
 class Kakao extends Component {
   componentDidMount() {
-    //window.Kakao.init("db38d8749dd506387432d526a93edf4a");
     window.Kakao.Link?.createDefaultButton({
       container: "#kakao-link-btn",
       objectType: "feed",

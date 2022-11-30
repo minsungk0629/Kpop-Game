@@ -57,7 +57,7 @@ const GameContent = (props) => {
     <>
       <div className="Container">
         <div className="link" id="fst">
-          <Link href={props.stage >= 10 ? "/Result" : "/Game"}>
+          <Link href={props.stage > 10 ? "/Result" : "/Game"}>
             <div className="background" id="firstMV">
               <div className="overlay">
                 <a>
@@ -70,22 +70,24 @@ const GameContent = (props) => {
                       className="image"
                       priority
                       onClick={() => {
-                        v = true;
-                        if (v && !visible && !secondV) {
-                          setVisible(true);
-                          v = false;
-                          if (firstViewC >= secondViewC) {
-                            props.setScore(props.score + 1);
-                            updateScore();
+                        if (props.stage < 11) {
+                          v = true;
+                          if (v && !visible && !secondV) {
+                            setVisible(true);
+                            v = false;
+                            if (firstViewC >= secondViewC) {
+                              props.setScore(props.score + 1);
+                              updateScore();
+                            }
                           }
-                        }
-                        if (visible && !secondV) {
-                          setVisible(false);
-                          setSecondV(true);
-                        } else if (!visible && secondV) {
-                          setSecondV(false);
-                          nextStage();
-                          props.setStage(props.stage + 1);
+                          if (visible && !secondV) {
+                            setVisible(false);
+                            setSecondV(true);
+                          } else if (!visible && secondV) {
+                            setSecondV(false);
+                            nextStage();
+                            props.setStage(props.stage + 1);
+                          }
                         }
                       }}
                     />
@@ -117,7 +119,7 @@ const GameContent = (props) => {
         </div>
         <div className="VS">VS</div>
         <div className="link" id="snd">
-          <Link href={props.stage >= 10 ? "/Result" : "/Game"}>
+          <Link href={props.stage > 10 ? "/Result" : "/Game"}>
             <div className="background" id="secondMV">
               <div className="overlay">
                 <a>
@@ -130,22 +132,24 @@ const GameContent = (props) => {
                       className="image"
                       priority
                       onClick={() => {
-                        v = true;
-                        if (v && !visible && !secondV) {
-                          setVisible(true);
-                          v = false;
-                          if (firstViewC <= secondViewC) {
-                            props.setScore(props.score + 1);
-                            updateScore();
+                        if (props.stage < 11) {
+                          v = true;
+                          if (v && !visible && !secondV) {
+                            setVisible(true);
+                            v = false;
+                            if (firstViewC <= secondViewC) {
+                              props.setScore(props.score + 1);
+                              updateScore();
+                            }
                           }
-                        }
-                        if (visible && !secondV) {
-                          setVisible(false);
-                          setSecondV(true);
-                        } else if (!visible && secondV) {
-                          setSecondV(false);
-                          nextStage();
-                          props.setStage(props.stage + 1);
+                          if (visible && !secondV) {
+                            setVisible(false);
+                            setSecondV(true);
+                          } else if (!visible && secondV) {
+                            setSecondV(false);
+                            nextStage();
+                            props.setStage(props.stage + 1);
+                          }
                         }
                       }}
                     />
