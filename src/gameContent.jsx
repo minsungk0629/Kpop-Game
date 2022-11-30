@@ -8,6 +8,7 @@ import CountUp from "react-countup";
 const GameContent = (props) => {
   const [videoInfo, setVideoInfo] = useState([]);
   const [visible, setVisible] = useState(false);
+  const [secondV, setSecondV] = useState(false);
   let v = false;
   function sleep(ms) {
     return new Promise((r) => setTimeout(r, ms));
@@ -70,17 +71,19 @@ const GameContent = (props) => {
                       priority
                       onClick={() => {
                         v = true;
-                        console.log(v, visible);
-                        if (v && !visible) {
+                        if (v && !visible && !secondV) {
                           setVisible(true);
                           v = false;
-                          console.log(v);
                           if (firstViewC >= secondViewC) {
                             props.setScore(props.score + 1);
                             updateScore();
                           }
                         }
-                        if (visible) {
+                        if (visible && !secondV) {
+                          setVisible(false);
+                          setSecondV(true);
+                        } else if (!visible && secondV) {
+                          setSecondV(false);
                           nextStage();
                           props.setStage(props.stage + 1);
                         }
@@ -99,6 +102,13 @@ const GameContent = (props) => {
                       style={{ fontSize: "3vh" }}
                     />{" "}
                     회
+                  </h3>
+                )}
+                {secondV && (
+                  <h3 className="text" id="DownViewCount">
+                    <div className="countUP" style={{ fontSize: "3vh" }}>
+                      {firstViewC} 회
+                    </div>
                   </h3>
                 )}
               </div>
@@ -121,20 +131,21 @@ const GameContent = (props) => {
                       priority
                       onClick={() => {
                         v = true;
-                        console.log(v, visible);
-                        if (v && !visible) {
+                        if (v && !visible && !secondV) {
                           setVisible(true);
                           v = false;
-                          console.log(v);
                           if (firstViewC <= secondViewC) {
                             props.setScore(props.score + 1);
                             updateScore();
                           }
                         }
-                        if (visible) {
+                        if (visible && !secondV) {
+                          setVisible(false);
+                          setSecondV(true);
+                        } else if (!visible && secondV) {
+                          setSecondV(false);
                           nextStage();
                           props.setStage(props.stage + 1);
-                          v = false;
                         }
                       }}
                     />
@@ -152,6 +163,13 @@ const GameContent = (props) => {
                       style={{ fontSize: "3vh" }}
                     />{" "}
                     회
+                  </h3>
+                )}
+                {secondV && (
+                  <h3 className="text" id="DownViewCount">
+                    <div className="countUP" style={{ fontSize: "3vh" }}>
+                      {secondViewC} 회
+                    </div>
                   </h3>
                 )}
                 <div className="text" id="Score">
