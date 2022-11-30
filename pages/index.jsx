@@ -1,4 +1,4 @@
-import StartPage from "../src/startPage";
+import Link from "next/link";
 import { useEffect } from "react";
 import Image from "../src/Image";
 import kpopIMG from "../public/kpop.jpg";
@@ -13,8 +13,23 @@ const Home = () => {
   }, []);
   return (
     <>
-      <StartPage />
-      <Image src={kpopIMG} alt="Vercel Logo" width={72} height={16} />
+      <div className="image-container">
+        <Image
+          src={kpopIMG}
+          alt="Vercel Logo"
+          className="img image-container"
+          fill
+        />
+        <Link href="/Game">
+          <button
+            type="button"
+            className="btn btn-warning button"
+            id="startBtn"
+          >
+            게임하기
+          </button>
+        </Link>
+      </div>
     </>
   );
 };
