@@ -3,10 +3,12 @@ import Link from "next/link";
 import Kakao from "../src/kakao";
 
 const Result = () => {
+  const kakaoKey = "db38d8749dd506387432d526a93edf4a";
+  console.log("kakaoKey= ", kakaoKey);
   useEffect(() => {
     if (!window.Kakao.isInitialized()) {
-      window.Kakao.init("db38d8749dd506387432d526a93edf4a");
-    } // init되면 true, 아니면 false를 반환한다
+      window.Kakao.init(kakaoKey);
+    }
   }, []);
   let score =
     typeof window !== "undefined" ? sessionStorage.getItem("score") : null;
