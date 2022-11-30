@@ -99,6 +99,7 @@ const GameContent = (props) => {
                 {visible && (
                   <h3 className="text" id="UpViewCount">
                     <CountUp
+                      duration={firstViewC < secondViewC ? 2 : 3}
                       className="countUP"
                       end={firstViewC}
                       style={{ fontSize: "3vh" }}
@@ -111,6 +112,11 @@ const GameContent = (props) => {
                     <div className="countUP" style={{ fontSize: "3vh" }}>
                       {firstViewC} 회
                     </div>
+                    {firstViewC < secondViewC ? (
+                      <div className="OX X">X</div>
+                    ) : (
+                      <div className="OX O">O</div>
+                    )}
                   </h3>
                 )}
               </div>
@@ -162,6 +168,7 @@ const GameContent = (props) => {
                 {visible && (
                   <h3 className="text" id="DownViewCount">
                     <CountUp
+                      duration={firstViewC > secondViewC ? 2 : 3}
                       className="countUP"
                       end={secondViewC}
                       style={{ fontSize: "3vh" }}
@@ -174,6 +181,11 @@ const GameContent = (props) => {
                     <div className="countUP" style={{ fontSize: "3vh" }}>
                       {secondViewC} 회
                     </div>
+                    {firstViewC > secondViewC ? (
+                      <div className="OX X">X</div>
+                    ) : (
+                      <div className="OX O">O</div>
+                    )}
                   </h3>
                 )}
                 <div className="text" id="Score">
