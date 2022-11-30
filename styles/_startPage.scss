@@ -3,7 +3,7 @@ body {
 }
 .image-container {
   position: relative;
-  min-height: 600px;
+  min-height: 400px;
   display: flex;
 }
 .image {
@@ -19,6 +19,11 @@ button {
 #startBtn {
   top: 100%;
   color: white;
+}
+@media screen and (min-width: 600px) {
+  .image-container {
+    min-height: 500px;
+  }
 }
 @media screen and (min-width: 1000px) {
   .image-container {
