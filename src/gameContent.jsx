@@ -93,7 +93,31 @@ const GameContent = (props) => {
                     />
                   )}
                 </a>
-                <div className="text" id="Title">
+                <div
+                  className="text"
+                  id="Title"
+                  onClick={() => {
+                    if (props.stage < 11) {
+                      v = true;
+                      if (v && !visible && !secondV) {
+                        setVisible(true);
+                        v = false;
+                        if (firstViewC >= secondViewC) {
+                          props.setScore(props.score + 1);
+                          updateScore();
+                        }
+                      }
+                      if (visible && !secondV) {
+                        setVisible(false);
+                        setSecondV(true);
+                      } else if (!visible && secondV) {
+                        setSecondV(false);
+                        nextStage();
+                        props.setStage(props.stage + 1);
+                      }
+                    }
+                  }}
+                >
                   {firstTitle}
                 </div>
                 {visible && (
@@ -184,7 +208,31 @@ const GameContent = (props) => {
                   )}
                 </a>
 
-                <div className="text" id="Title">
+                <div
+                  className="text"
+                  id="Title"
+                  onClick={() => {
+                    if (props.stage < 11) {
+                      v = true;
+                      if (v && !visible && !secondV) {
+                        setVisible(true);
+                        v = false;
+                        if (firstViewC >= secondViewC) {
+                          props.setScore(props.score + 1);
+                          updateScore();
+                        }
+                      }
+                      if (visible && !secondV) {
+                        setVisible(false);
+                        setSecondV(true);
+                      } else if (!visible && secondV) {
+                        setSecondV(false);
+                        nextStage();
+                        props.setStage(props.stage + 1);
+                      }
+                    }
+                  }}
+                >
                   {secondTitle}
                 </div>
                 {visible && (
