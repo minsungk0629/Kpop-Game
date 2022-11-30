@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { useEffect, useState } from "react";
 import Axios from "axios";
-import Image from "next/image";
+import Image from "./Image";
 import Link from "next/link";
 import CountUp from "react-countup";
 
