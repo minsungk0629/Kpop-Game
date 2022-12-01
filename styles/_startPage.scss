@@ -3,7 +3,7 @@ body {
 }
 .image-container {
   position: relative;
-  min-height: 400px;
+  min-height: 800px;
   display: flex;
 }
 button {
@@ -14,21 +14,32 @@ button {
   right: 50%;
   transform: translate(50%, 30%);
 }
+#freepik {
+  z-index: 3;
+}
 #ImgTag {
   width: 50%;
   z-index: 3;
 }
 #startBtn {
-  top: 100%;
+  top: 80%;
   color: white;
+}
+#dImg {
+  display: none;
+}
+#mImg {
+  display: inline-block;
 }
 @media screen and (min-width: 600px) {
   .image-container {
-    min-height: 500px;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .image-container {
     min-height: 800px;
+  }
+  #dImg {
+    margin-top: 30px;
+    display: inline-block;
+  }
+  #mImg {
+    display: none;
   }
 }
