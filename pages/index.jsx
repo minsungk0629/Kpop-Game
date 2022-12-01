@@ -4,7 +4,7 @@ import Image from "../src/Image";
 import kpopIMG from "../public/kpop.jpg";
 
 const Home = () => {
-  const kakaoKey = "db38d8749dd506387432d526a93edf4a";
+  const kakaoKey = "a8fd92480680c38b85ea2759e039e2cb";
   useEffect(() => {
     if (!window.Kakao.isInitialized()) {
       console.log("kakaoKey= ", kakaoKey);

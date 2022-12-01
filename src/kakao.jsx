@@ -6,21 +6,18 @@ class Kakao extends Component {
       container: "#kakao-link-btn",
       objectType: "feed",
       content: {
-        title: `${
-          typeof window !== "undefined" ? sessionStorage.getItem("score") : 0
-        }점 획득!`,
-        description: "",
+        title: "너 KPOP 좀 아니?",
+        // title: `${
+        //   typeof window !== "undefined" ? sessionStorage.getItem("score") : 0
+        // }점 획득!`,
+        description: "kpop 뮤직비디오 유튜브 조회수 비교 게임",
         imageUrl: "https://ifh.cc/g/D8wKsS.jpg",
         link: {
           mobileWebUrl: "https://kpop-game-three.vercel.app/",
           webUrl: "https://kpop-game-three.vercel.app/",
         },
       },
-      social: {
-        likeCount: 842,
-        commentCount: 1803,
-        sharedCount: 1236,
-      },
+      social: {},
       buttons: [
         {
           title: "나도 하러 가기",
