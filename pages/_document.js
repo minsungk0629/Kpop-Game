@@ -5,6 +5,7 @@ class CustomDocument extends Document {
     return (
       <Html>
         <Head>
+          <title>너 KPOP 좀 아니?</title>
           <link
             rel="stylesheet"
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
