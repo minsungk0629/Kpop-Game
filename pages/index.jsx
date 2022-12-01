@@ -29,6 +29,7 @@ const Home = () => {
             게임하기
           </button>
         </Link>
+        <a href="http://www.freepik.com">Designed by Freepik</a>
       </div>
     </>
   );
