@@ -124,18 +124,65 @@ const GameContent = (props) => {
                 {visible && (
                   <h3 className="text" id="UpViewCount">
                     <CountUp
-                      duration={firstViewC < secondViewC ? 2 : 3}
+                      duration={firstViewC < secondViewC ? 1 : 2}
                       className="countUP"
+                      separator=","
+                      start={0}
                       end={firstViewC}
                       style={{ fontSize: "3vh" }}
+                      onEnd={() => {
+                        if (props.stage < 11) {
+                          v = true;
+                          if (v && !visible && !secondV) {
+                            setVisible(true);
+                            v = false;
+                            if (firstViewC >= secondViewC) {
+                              props.setScore(props.score + 1);
+                              updateScore();
+                            }
+                          }
+                          if (visible && !secondV) {
+                            setVisible(false);
+                            setSecondV(true);
+                          } else if (!visible && secondV) {
+                            setSecondV(false);
+                            nextStage();
+                            props.setStage(props.stage + 1);
+                          }
+                        }
+                      }}
                     />{" "}
                     회
                   </h3>
                 )}
                 {secondV && (
                   <h3 className="text" id="DownViewCount">
-                    <div className="countUP" style={{ fontSize: "3vh" }}>
-                      {firstViewC} 회
+                    <div
+                      className="countUP"
+                      style={{ fontSize: "3vh" }}
+                      onClick={() => {
+                        if (props.stage < 11) {
+                          v = true;
+                          if (v && !visible && !secondV) {
+                            setVisible(true);
+                            v = false;
+                            if (firstViewC >= secondViewC) {
+                              props.setScore(props.score + 1);
+                              updateScore();
+                            }
+                          }
+                          if (visible && !secondV) {
+                            setVisible(false);
+                            setSecondV(true);
+                          } else if (!visible && secondV) {
+                            setSecondV(false);
+                            nextStage();
+                            props.setStage(props.stage + 1);
+                          }
+                        }
+                      }}
+                    >
+                      {firstViewC.toLocaleString()} 회
                     </div>
                     {firstViewC < secondViewC ? (
                       <div
@@ -238,18 +285,65 @@ const GameContent = (props) => {
                 {visible && (
                   <h3 className="text" id="DownViewCount">
                     <CountUp
-                      duration={firstViewC > secondViewC ? 2 : 3}
+                      duration={firstViewC > secondViewC ? 1 : 2}
                       className="countUP"
-                      end={secondViewC}
+                      separator=","
+                      start={0}
+                      end={Number(secondViewC)}
                       style={{ fontSize: "3vh" }}
+                      onEnd={() => {
+                        if (props.stage < 11) {
+                          v = true;
+                          if (v && !visible && !secondV) {
+                            setVisible(true);
+                            v = false;
+                            if (firstViewC <= secondViewC) {
+                              props.setScore(props.score + 1);
+                              updateScore();
+                            }
+                          }
+                          if (visible && !secondV) {
+                            setVisible(false);
+                            setSecondV(true);
+                          } else if (!visible && secondV) {
+                            setSecondV(false);
+                            nextStage();
+                            props.setStage(props.stage + 1);
+                          }
+                        }
+                      }}
                     />{" "}
                     회
                   </h3>
                 )}
                 {secondV && (
                   <h3 className="text" id="DownViewCount">
-                    <div className="countUP" style={{ fontSize: "3vh" }}>
-                      {secondViewC} 회
+                    <div
+                      className="countUP"
+                      style={{ fontSize: "3vh" }}
+                      onClick={() => {
+                        if (props.stage < 11) {
+                          v = true;
+                          if (v && !visible && !secondV) {
+                            setVisible(true);
+                            v = false;
+                            if (firstViewC <= secondViewC) {
+                              props.setScore(props.score + 1);
+                              updateScore();
+                            }
+                          }
+                          if (visible && !secondV) {
+                            setVisible(false);
+                            setSecondV(true);
+                          } else if (!visible && secondV) {
+                            setSecondV(false);
+                            nextStage();
+                            props.setStage(props.stage + 1);
+                          }
+                        }
+                      }}
+                    >
+                      {secondViewC.toLocaleString()} 회
                     </div>
                     {firstViewC > secondViewC ? (
                       <div
