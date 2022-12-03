@@ -25,8 +25,12 @@ class CustomDocument extends Document {
             integrity="sha384-eKjgHJ9+vwU/FCSUG3nV1RKFolUXLsc6nLQ2R1tD0t4YFPCvRmkcF8saIfOZNWf/"
             crossorigin="anonymous"
           ></script>
-
           <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+          <script
+            type="text/javascript"
+            src="//t1.daumcdn.net/kas/static/ba.min.js"
+            async
+          ></script>
         </Head>
         <body>
           <div>
