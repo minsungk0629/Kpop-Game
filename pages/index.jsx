@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useEffect } from "react";
 import Image from "../src/Image";
 import kpopIMG from "../public/kpop.jpg";
-import mobileImg from "../public/mobileimg.png";
+import mobileImg from "../public/mobileimg.jpeg";
 import desktopImg from "../public/desktopimg.jpeg";
 import Head from "next/head";
 
