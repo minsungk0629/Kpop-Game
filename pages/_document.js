@@ -11,6 +11,10 @@ class CustomDocument extends Document {
             integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
             crossOrigin="anonymous"
           />
+          <meta
+            name="naver-site-verification"
+            content="ff3d1d8302047a4ebcd535996e11f5344774992b"
+          />
           <script
             src="https://t1.kakaocdn.net/kakao_js_sdk/2.0.1/kakao.min.js"
             integrity="sha384-eKjgHJ9+vwU/FCSUG3nV1RKFolUXLsc6nLQ2R1tD0t4YFPCvRmkcF8saIfOZNWf/"
