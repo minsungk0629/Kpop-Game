@@ -42,7 +42,7 @@ const GameContent = (props) => {
 
   useEffect(() => {
     const IDString = props.firstID + props.secondID;
-    const apiKey = "AIzaSyDNikTB4dl2anKMqtQRQCEw9eTjwtAw_j0";
+    const apiKey = "AIzaSyBGuM8XYoSx26rhM2Jv-zPQLUccONiCDXI";
     Axios.get(
       `/api/videos?part=snippet,statistics${IDString}&maxResults=300&key=${apiKey}`
     ).then((res) => {
