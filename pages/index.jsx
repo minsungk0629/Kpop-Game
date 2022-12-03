@@ -34,9 +34,7 @@ const Home = () => {
           fill
           id="dImg"
         />
-        <a href="http://www.freepik.com" id="freepik">
-          Designed by Freepik
-        </a>
+
         <Link href="/Game">
           <button
             type="button"
@@ -54,6 +52,9 @@ const Home = () => {
           data-ad-height="100"
         ></ins>
       </div>
+      <a href="http://www.freepik.com" id="freepik">
+        Designed by Freepik
+      </a>
     </>
   );
 };
