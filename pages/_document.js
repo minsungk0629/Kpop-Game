@@ -16,7 +16,7 @@ class CustomDocument extends Document {
             src="https://www.googletagmanager.com/gtag/js?id=G-5K49WYZZEW"
           ></script>
           <script>
-            var window.dataLayer = window.dataLayer || [];
+            window.dataLayer = window.dataLayer || [];
             window.dataLayer.push('js', new Date());
             window.dataLayer.push('config', 'G-5K49WYZZEW');
           </script>

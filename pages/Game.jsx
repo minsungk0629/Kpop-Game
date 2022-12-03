@@ -39,14 +39,14 @@ export async function getStaticProps() {
   const apiKey = process.env.NEXT_PUBLIC_API_KEY;
   const playlistID = "PLODMrfwE__J41rFco3nOsCRZm62qETZ_O";
   let res = await fetch(
-    `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistID}&maxResults=50&key=AIzaSyBGuM8XYoSx26rhM2Jv-zPQLUccONiCDXI`
+    `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistID}&maxResults=50&key=AIzaSyDNikTB4dl2anKMqtQRQCEw9eTjwtAw_j0`
   );
   let posts = await res.json();
   getVideoId(posts);
 
   while (posts.nextPageToken) {
     res = await fetch(
-      `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistID}&maxResults=50&pageToken=${posts.nextPageToken}&key=AIzaSyBGuM8XYoSx26rhM2Jv-zPQLUccONiCDXI`
+      `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistID}&maxResults=50&pageToken=${posts.nextPageToken}&key=AIzaSyDNikTB4dl2anKMqtQRQCEw9eTjwtAw_j0`
     );
     posts = await res.json();
     getVideoId(posts);
