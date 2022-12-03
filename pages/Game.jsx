@@ -6,11 +6,11 @@ const Game = (props) => {
   function rand(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
   }
-  const firstNum = rand(0, props.videoID.length);
-  const secondNum = rand(0, props.videoId?.length);
+  let firstNum = rand(0, props.videoID.length);
   const [score, setScore] = useState(0);
   const [firstID, setFirstID] = useState(props.videoID[firstNum]);
-  const [secondID, setSecondID] = useState(props.videoID[1]);
+  firstNum = rand(0, props.videoID.length);
+  const [secondID, setSecondID] = useState(props.videoID[firstNum]);
   const [stage, setStage] = useState(1);
   return (
     <GameContent
@@ -38,11 +38,19 @@ export async function getStaticProps() {
   }
   const apiKey = process.env.NEXT_PUBLIC_API_KEY;
   const playlistID = "PLODMrfwE__J41rFco3nOsCRZm62qETZ_O";
-  const res = await fetch(
-    `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistID}&maxResults=300&key=AIzaSyDNikTB4dl2anKMqtQRQCEw9eTjwtAw_j0`
+  let res = await fetch(
+    `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistID}&maxResults=50&key=AIzaSyDNikTB4dl2anKMqtQRQCEw9eTjwtAw_j0`
   );
-  const posts = await res.json();
+  let posts = await res.json();
   getVideoId(posts);
+
+  while (posts.nextPageToken) {
+    res = await fetch(
+      `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistID}&maxResults=50&pageToken=${posts.nextPageToken}&key=AIzaSyDNikTB4dl2anKMqtQRQCEw9eTjwtAw_j0`
+    );
+    posts = await res.json();
+    getVideoId(posts);
+  }
   return {
     props: {
       posts,
