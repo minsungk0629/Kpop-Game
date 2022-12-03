@@ -5,7 +5,6 @@ class CustomDocument extends Document {
     return (
       <Html>
         <Head>
-          <title>너 KPOP 좀 아니?</title>
           <link
             rel="stylesheet"
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -13,10 +12,20 @@ class CustomDocument extends Document {
             crossOrigin="anonymous"
           />
           <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-5K49WYZZEW"
+          ></script>
+          <script>
+            var window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push('js', new Date());
+            window.dataLayer.push('config', 'G-5K49WYZZEW');
+          </script>
+          <script
             src="https://t1.kakaocdn.net/kakao_js_sdk/2.0.1/kakao.min.js"
             integrity="sha384-eKjgHJ9+vwU/FCSUG3nV1RKFolUXLsc6nLQ2R1tD0t4YFPCvRmkcF8saIfOZNWf/"
             crossorigin="anonymous"
           ></script>
+
           <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
         </Head>
         <body>

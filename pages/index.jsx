@@ -4,6 +4,7 @@ import Image from "../src/Image";
 import kpopIMG from "../public/kpop.jpg";
 import mobileImg from "../public/mobileimg.jpeg";
 import desktopImg from "../public/desktopimg.jpeg";
+import Head from "next/head";
 
 const Home = () => {
   const kakaoKey = "a8fd92480680c38b85ea2759e039e2cb";
@@ -15,6 +16,9 @@ const Home = () => {
   }, []);
   return (
     <>
+      <Head>
+        <title>너 KPOP 좀 아니?</title>
+      </Head>
       <div className="image-container">
         <Image
           src={mobileImg}
