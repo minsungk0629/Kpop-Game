@@ -3,18 +3,18 @@ import Script from "next/script";
 import { DefaultSeo } from "next-seo";
 
 const DEFAULT_SEO = {
-  title: "meta head title에 들어가는 값",
-  description: "meta head description에 들어가는 값",
-  canonical: "https://www.carrotins.com",
+  title: "너 KPOP좀 아니",
+  description: "KPOP 뮤직비디오 조회수 맞추기 게임, 너 케이팝 좀 아니?",
+  canonical: "https://doyouknowkpop.com",
   openGraph: {
     type: "website",
     locale: "ko_KR",
-    url: "카카오톡, 페이스북에 링크 넣으면 연결되는 url",
-    title: "카카오톡, 페이스북에 링크 넣으면 올라올 타이틀",
-    site_name: "사이트이름",
+    url: "https://doyouknowkpop.com",
+    title: "너 KPOP좀 아니",
+    site_name: "너 KPOP좀 아니",
     images: [
       {
-        url: "카카오톡, 페이스북에에 링크 넣으면 올라올 이미지",
+        url: "https://ifh.cc/g/xgpQqk.png",
         width: 285,
         height: 167,
         alt: "이미지",
@@ -26,6 +26,7 @@ const DEFAULT_SEO = {
 function MyApp({ Component, pageProps }) {
   return (
     <>
+      <DefaultSeo {...DEFAULT_SEO} />
       <Script
         strategy="afterInteractive"
         src="https://www.googletagmanager.com/gtag/js?id=G-5K49WYZZEW"
