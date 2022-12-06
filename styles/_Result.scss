@@ -48,9 +48,9 @@ button {
   font-size: 3rem;
 }
 #Resultads {
-  display: none;
+  display: inline-block;
   width: 100%;
-  position: absolute;
+  position: relative;
   margin: auto;
   height: 100%;
   top: 90%;
