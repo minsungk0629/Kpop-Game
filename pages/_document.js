@@ -36,6 +36,12 @@ class CustomDocument extends Document {
             <Main />
           </div>
           <NextScript />
+          <ins
+            className="kakao_ad_area"
+            data-ad-unit="DAN-vmRbfJoxeLsw4jE9"
+            data-ad-width="320"
+            data-ad-height="100"
+          ></ins>
         </body>
       </Html>
     );
