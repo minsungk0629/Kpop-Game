@@ -34,12 +34,12 @@ class CustomDocument extends Document {
         <body>
           <div>
             <Main />
-            <ins
+            {/* <ins
               className="kakao_ad_area"
               data-ad-unit="DAN-vmRbfJoxeLsw4jE9"
               data-ad-width="320"
               data-ad-height="100"
-            ></ins>
+            ></ins> */}
           </div>
           <NextScript />
         </body>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Kakao from "../src/kakao";
+import KakaoAdFit from "../src/kakaoAdFit";
 
 const Result = () => {
   const kakaoKey = "a8fd92480680c38b85ea2759e039e2cb";
@@ -40,6 +41,10 @@ const Result = () => {
             </button>
           </Link>
           <Kakao props={score} />
+
+          <div id="Resultads">
+            <KakaoAdFit />
+          </div>
         </div>
       </div>
     </>

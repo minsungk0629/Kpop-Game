@@ -26,14 +26,11 @@ button {
 #resultBtn {
   z-index: 1;
   position: absolute;
-  top: 80vh;
+  top: 70vh;
   text-align: center;
   justify-content: center;
   right: 50%;
   transform: translate(50%, 30%);
-}
-#shareBtn {
-  top: 30%;
 }
 #ScoreText {
   font-size: 8rem;
@@ -47,10 +44,23 @@ button {
 #Wja {
   font-size: 3rem;
 }
+
 #Resultads {
-  position: relative;
-  margin: auto;
+  position: absolute;
   z-index: 100;
+  top: 85vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 700px;
+}
+
+.kakaoFit {
+  position: absolute;
+}
+
+.kakao_ad_area {
+  position: relative !important;
 }
 
 @media screen and (max-width: 500px) {
@@ -59,5 +69,14 @@ button {
   }
   #ScoreText {
     font-size: 7.1rem;
+  }
+  #Resultads {
+    position: absolute;
+    transform: none;
+    z-index: 100;
+    top: 80vh;
+    width: 100%;
+    left: 0;
+    //transform: translate(-50%, -50%);
   }
 }

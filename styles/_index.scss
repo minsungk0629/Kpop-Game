@@ -2,15 +2,9 @@
   top: 95%;
   color: black;
 }
-.kakao_ad_area {
-  position: absolute;
-  width: 100%;
-  margin: auto;
-  height: 100%;
-  top: 0%;
-}
+
 #kakao_ad {
-  position: absolute;
+  position: absolute !important;
   width: 100%;
   margin: auto;
   height: 100%;
@@ -21,15 +15,8 @@
   #freepik {
     top: 0%;
   }
-  .kakao_ad_area {
-    position: absolute;
-    width: 100%;
-    margin: auto;
-    height: 100%;
-    top: 90%;
-  }
   #kakao_ad {
-    position: absolute;
+    position: absolute !important;
     width: 100%;
     margin: auto;
     height: 100%;
