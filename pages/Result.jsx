@@ -42,7 +42,6 @@ const Result = () => {
       </div>
       <ins
         class="kakao_ad_area"
-        style="display:none;"
         data-ad-unit="DAN-KMKKOYSr5pMneW8o"
         data-ad-width="320"
         data-ad-height="100"

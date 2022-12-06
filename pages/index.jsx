@@ -49,8 +49,8 @@ const Home = () => {
           </button>
         </Link>
         <ins
+          id="Resultads"
           className="kakao_ad_area"
-          styles="display:none;width:100%;"
           data-ad-unit="DAN-vmRbfJoxeLsw4jE9"
           data-ad-width="320"
           data-ad-height="100"
