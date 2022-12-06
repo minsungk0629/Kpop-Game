@@ -49,6 +49,13 @@ const Home = () => {
           </button>
         </Link>
       </div>
+      <ins
+        class="kakao_ad_area"
+        id="kakao_ad"
+        data-ad-unit="DAN-KMKKOYSr5pMneW8o"
+        data-ad-width="320"
+        data-ad-height="100"
+      ></ins>
       <a href="http://www.freepik.com" id="freepik">
         Designed by Freepik
       </a>
