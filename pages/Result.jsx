@@ -40,6 +40,7 @@ const Result = () => {
         </Link>
         <Kakao props={score} />
         <ins
+          id="Resultads"
           class="kakao_ad_area"
           data-ad-unit="DAN-KMKKOYSr5pMneW8o"
           data-ad-width="320"

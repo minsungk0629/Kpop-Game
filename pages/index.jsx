@@ -49,7 +49,6 @@ const Home = () => {
           </button>
         </Link>
         <ins
-          id="Resultads"
           className="kakao_ad_area"
           data-ad-unit="DAN-vmRbfJoxeLsw4jE9"
           data-ad-width="320"
