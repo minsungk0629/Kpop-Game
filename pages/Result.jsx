@@ -18,13 +18,6 @@ const Result = () => {
   return (
     <div className="resultContainer">
       <div className="resultScore" style={{ maxWidth: "750px" }}>
-        <ins
-          id="Resultads"
-          class="kakao_ad_area"
-          data-ad-unit="DAN-KMKKOYSr5pMneW8o"
-          data-ad-width="320"
-          data-ad-height="100"
-        ></ins>
         <div id="ResultText">
           {score == 10
             ? `당신은 진정한 KPOP고인물!`
@@ -47,6 +40,13 @@ const Result = () => {
         </Link>
         <Kakao props={score} />
       </div>
+      <ins
+        id="Resultads"
+        class="kakao_ad_area"
+        data-ad-unit="DAN-KMKKOYSr5pMneW8o"
+        data-ad-width="320"
+        data-ad-height="100"
+      ></ins>
     </div>
   );
 };
