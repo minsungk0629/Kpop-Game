@@ -7,6 +7,10 @@ const nextConfig = {
         source: "/api/:path*",
         destination: `https://www.googleapis.com/youtube/v3/:path*`,
       },
+      {
+        source: "/robots.txt",
+        destination: "/api/robots",
+      },
     ];
   },
   reactStrictMode: true,
