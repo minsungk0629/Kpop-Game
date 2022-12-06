@@ -41,9 +41,9 @@ const Result = () => {
         <Kakao props={score} />
       </div>
       <ins
-        className="kakao_ad_area"
-        styles="display:none;width:100%;"
-        data-ad-unit="DAN-vmRbfJoxeLsw4jE9"
+        class="kakao_ad_area"
+        style="display:none;"
+        data-ad-unit="DAN-KMKKOYSr5pMneW8o"
         data-ad-width="320"
         data-ad-height="100"
       ></ins>
