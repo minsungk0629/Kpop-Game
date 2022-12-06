@@ -17,12 +17,6 @@ const Result = () => {
   }
   return (
     <div className="resultContainer">
-      <ins
-        class="kakao_ad_area"
-        data-ad-unit="DAN-KMKKOYSr5pMneW8o"
-        data-ad-width="320"
-        data-ad-height="100"
-      ></ins>
       <div className="resultScore" style={{ maxWidth: "750px" }}>
         <div id="ResultText">
           {score == 10
@@ -45,6 +39,12 @@ const Result = () => {
           </button>
         </Link>
         <Kakao props={score} />
+        <ins
+          class="kakao_ad_area"
+          data-ad-unit="DAN-KMKKOYSr5pMneW8o"
+          data-ad-width="320"
+          data-ad-height="100"
+        ></ins>
       </div>
     </div>
   );
