@@ -48,12 +48,6 @@ const Home = () => {
             게임하기
           </button>
         </Link>
-        <ins
-          className="kakao_ad_area"
-          data-ad-unit="DAN-vmRbfJoxeLsw4jE9"
-          data-ad-width="320"
-          data-ad-height="100"
-        ></ins>
       </div>
       <a href="http://www.freepik.com" id="freepik">
         Designed by Freepik
