@@ -50,6 +50,10 @@ button {
 #Resultads {
   display: none;
   width: 100%;
+  position: absolute;
+  margin: auto;
+  height: 100%;
+  top: 90%;
 }
 
 @media screen and (max-width: 500px) {
