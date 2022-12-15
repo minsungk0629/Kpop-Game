@@ -1,6 +1,7 @@
 import "../styles/app.scss";
 import Script from "next/script";
 import { DefaultSeo } from "next-seo";
+import Head from "next/head";
 
 const DEFAULT_SEO = {
   title: "너 KPOP좀 아니",
@@ -26,6 +27,9 @@ const DEFAULT_SEO = {
 function MyApp({ Component, pageProps }) {
   return (
     <>
+      <Head>
+        <title>너 KPOP좀 아니?</title>
+      </Head>
       <DefaultSeo {...DEFAULT_SEO} />
       <Script
         strategy="afterInteractive"
