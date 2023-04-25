@@ -17,7 +17,7 @@ const Home = () => {
   return (
     <>
       <Head>
-    <meta name="naver-site-verification" content="a11fceb1849e9334fdaaf551edafc816cc1f56c2" />
+        <meta name="naver-site-verification" content="a11fceb1849e9334fdaaf551edafc816cc1f56c2" />
         <meta
           name="naver-site-verification"
           content="1e08c718c78260bbb48647d935c4fc1c72645bd0"
