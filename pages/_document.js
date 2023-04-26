@@ -5,6 +5,7 @@ class CustomDocument extends Document {
     return (
       <Html>
         <Head>
+          <meta name="naver-site-verification" content="f89315ca8a795b73bd0bd77f938a2c5cdcd47baf" />
           <link
             rel="stylesheet"
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
