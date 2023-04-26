@@ -17,11 +17,7 @@ const Home = () => {
   return (
     <>
       <Head>
-        <meta name="naver-site-verification" content="a11fceb1849e9334fdaaf551edafc816cc1f56c2" />
-        <meta
-          name="naver-site-verification"
-          content="1e08c718c78260bbb48647d935c4fc1c72645bd0"
-        />
+      <meta name="naver-site-verification" content="f89315ca8a795b73bd0bd77f938a2c5cdcd47baf" />
         <title>너 KPOP 좀 아니?</title>
       </Head>
       <div className="image-container">
