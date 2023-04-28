@@ -19,6 +19,16 @@ const Home = () => {
       <Head>
       <meta name="naver-site-verification" content="f89315ca8a795b73bd0bd77f938a2c5cdcd47baf" />
         <title>너 KPOP 좀 아니?</title>
+      <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-5K49WYZZEW">
+        </script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-5K49WYZZEW');
+        </script>
       </Head>
       <div className="image-container">
         <Image
